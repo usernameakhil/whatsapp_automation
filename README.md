@@ -5,7 +5,7 @@
 
 ---
 
-## 👔 Executive Summary for Technical Recruiters
+##  Executive Summary for Technical Recruiters
 
 **WhatsApp Store Automation** was engineered and deployed by **Sitezy Agency** for a high-volume retail client (*P.R. Watches & Mobiles*, Chilakaluripet, AP, India) experiencing operational bottlenecks from hundreds of unmanaged daily WhatsApp customer inquiries. 
 
@@ -35,7 +35,7 @@ Engineered for extreme reliability, sub-second latency, and measurable business 
 
 ---
 
-## 🎯 What We Solved for the Client (Sitezy Case Study)
+## What We Solved for the Client (Sitezy Case Study)
 
 ### 1. The After-Hours Revenue Bleed
 * **The Problem**: Over 40% of customer inquiries arrived between 9:00 PM and 10:00 AM when shop staff were off-duty. Potential buyers messaged competitors or lost purchase intent before morning staff arrived.
@@ -59,18 +59,9 @@ Engineered for extreme reliability, sub-second latency, and measurable business 
 * **The Problem**: Rigid chatbots frustrate high-value customers when custom questions arise or when custom negotiation is required.
 * **Sitezy Solution**: Integrated a live **Admin Operations Console** (React 19). Store operators can observe live conversations in real time, toggle the AI bot off per session (`is_bot_disabled: true`), and send direct manual WhatsApp dispatches from the web UI.
 
----
-## 📐 Complete Production Architecture Flowchart
 
-The end-to-end production architecture flowchart below details every subsystem, communication interface, transaction boundary, and external integration across the WhatsApp Store Automation ecosystem:
 
-<div align="center">
-  <img src="./whatsapp_architecture.jpg" alt="WhatsApp Store Automation Complete Production Architecture Flowchart" width="100%" />
-</div>
-
----
-
-### 🧩 Architectural Pipeline Breakdown
+###  Architectural Pipeline Breakdown
 
 1. **User Clients & Presentation Layer**:
    * **Customer WhatsApp Client**: Runs across iOS, Android, and Desktop WhatsApp messengers; utilizes Meta Graph API v18.0 interactive components (quick-reply buttons, 10-row dropdown list catalogs, media uploads).
@@ -95,7 +86,7 @@ The end-to-end production architecture flowchart below details every subsystem, 
 
 ---
 
-### 📊 End-to-End Execution Sequence Flowchart
+###  End-to-End Execution Sequence Flowchart
 
 ```mermaid
 flowchart TD
@@ -151,7 +142,7 @@ flowchart TD
 
 ---
 
-## 🔄 Finite State Machine (FSM) Lifecycle
+## Finite State Machine (FSM) Lifecycle
 
 The conversational storefront executes as a deterministic, memory-efficient Finite State Machine persisted within MongoDB:
 
@@ -191,7 +182,7 @@ The conversational storefront executes as a deterministic, memory-efficient Fini
 
 ---
 
-## 🛠️ Core Engineering Features
+##  Core Engineering Features
 
 ### 1. Multimodal AI Visual Product Search
 * **Execution**: Allows customers to photograph a physical product (or share a screenshot from social media) and ask for price and availability.
@@ -228,7 +219,7 @@ The conversational storefront executes as a deterministic, memory-efficient Fini
 
 ---
 
-## 💻 Technology Stack
+## Technology Stack
 
 | Layer | Technologies & Frameworks | Architectural Responsibilities |
 | :--- | :--- | :--- |
@@ -242,7 +233,7 @@ The conversational storefront executes as a deterministic, memory-efficient Fini
 
 ---
 
-## 🚀 Local Deployment Guide
+##  Local Deployment Guide
 
 ### Prerequisites
 * **Node.js**: v18.x or higher
@@ -251,63 +242,9 @@ The conversational storefront executes as a deterministic, memory-efficient Fini
 * **Google AI Studio**: Gemini API Key
 * **Cloudinary Account**: Cloud name and unsigned upload preset
 
----
 
-### Step 1: Backend Environment Configuration (`whatsapp-backend/.env`)
 
-Create `whatsapp-backend/.env` with the following configuration:
-
-```env
-PORT=8000
-MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/whatsapp_store
-WHATSAPP_TOKEN=EAAG...your_meta_permanent_token_here
-PHONE_NUMBER_ID=your_meta_phone_number_id_here
-VERIFY_TOKEN=your_custom_webhook_secret_verify_token
-GEMINI_API_KEY=AIzaSy...your_gemini_api_key_here
-ADMIN_PHONE_NUMBER=919391958315
-CLOUDINARY_API_KEY=your_cloudinary_api_key
-CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-```
-
----
-
-### Step 2: Launch the Backend Service
-
-```bash
-cd whatsapp-backend
-npm install
-npm run start
-```
-*The backend initializes on port `8000`, establishes connection to MongoDB Atlas, and synchronizes the 10-day TTL indexes.*
-
----
-
-### Step 3: Launch the React Admin Operations Console
-
-```bash
-cd whatsapp-admin
-npm install
-npm run dev
-```
-*The management console launches on `http://localhost:5173` with instant Vite Hot Module Replacement (HMR).*
-
----
-
-### Step 4: Webhook Tunneling (For Local Development)
-
-Expose port `8000` to the internet using `ngrok` or `localtunnel`:
-
-```bash
-ngrok http 8000
-```
-Configure your Meta App Webhook Callback URL:
-* **Callback URL**: `https://<your-ngrok-domain>.ngrok-free.app/webhook`
-* **Verify Token**: Must match `VERIFY_TOKEN` in your `.env`
-* **Webhook Subscriptions**: Subscribe to `messages` field.
-
----
-
-## 🔒 Security & Reliability Engineering
+## Security & Reliability Engineering
 
 1. **Webhook Cryptographic Handshake**: Validates Meta hub challenge tokens (`hub.verify_token`) to reject unauthorized webhook spoofing.
 2. **Deterministic Fallbacks**: If Gemini API experiences transient latency or token exhaustion, requests gracefully degrade to human support ticket creation (`FALLBACK_SUPPORT_TICKET_OPENED`).
@@ -317,7 +254,7 @@ Configure your Meta App Webhook Callback URL:
 
 ---
 
-## 👨‍💻 Project Engineering Credits
+## Project Engineering Credits
 
 * **Lead Engineer**: Akhil Shaik
 * **Client**: P.R. Watches & Mobiles (Chilakaluripet, AP, India)
