@@ -26,7 +26,7 @@ Engineered for extreme reliability, sub-second latency, and measurable business 
 | **First-Response Latency** | 18–35 minutes (Manual human staff response) | **< 1.4 seconds** (Asynchronous webhook processing) | **95.6% Latency Reduction** |
 | **24/7 Store Coverage & Availability** | 45% window (Limited to 10:00 AM – 9:00 PM) | **100% round-the-clock uptime** (Zero dropped night leads) | **+55% Active Customer Window** |
 | **Inquiry-to-Order Conversion Rate** | 4.2% (High friction & drop-offs during delay) | **16.8%** (Guided interactive lists & instant checkout) | **4.0x Conversion Multiplier (+300%)** |
-| **Monthly Client Net Revenue** | ₹3,80,000 / month (Pre-automation baseline) | **₹6,40,000 / month** (Sustained run-rate post-launch) | **+68.4% Top-Line Revenue Growth** |
+| **Monthly Client Net Revenue** | ₹1,80,000 / month (Pre-automation baseline) | **₹3,10,000 / month** (Sustained run-rate post-launch) | **+68.4% Top-Line Revenue Growth** |
 | **Manual Support Labor Overhead** | 2.5 FTEs (Full-time employees dedicated to WhatsApp) | **0.2 FTEs** (Only high-exception escalation tickets) | **88% Operational Labor Cost Savings** |
 | **COD Return to Origin (RTO) Rate** | 31.4% (Uncommitted buyers refusing doorstep delivery) | **< 4.1%** (Enforced ₹500 UPI Advance Gate) | **86.9% Slashing of Shipping Losses** |
 | **Payment Screenshot Audit Accuracy** | 81% (Human eye-test prone to fake/edited receipts) | **99.2%** (Gemini 2.5 Flash Multimodal OCR Audit) | **Near-Zero Fraud / Zero Bad Debts** |
